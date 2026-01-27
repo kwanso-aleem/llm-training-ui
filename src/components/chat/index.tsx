@@ -59,14 +59,19 @@ const Chat: FC = () => {
           }
         }}
       >
-        <input
+        <textarea
           className="input"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           disabled={status !== "ready"}
           placeholder="Say something..."
+          rows={10}
         />
-        <button type="submit" disabled={status !== "ready"}>
+        <button
+          type="submit"
+          disabled={status !== "ready"}
+          className="submit-button"
+        >
           Submit
         </button>
       </form>
